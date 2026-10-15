@@ -1,0 +1,446 @@
+html = r'''<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REX | Official Website</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: white;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #101010;
+    border-bottom: 1px solid #292929;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.logo {
+    font-size: 29px;
+    font-weight: 900;
+    color: #ff2020;
+    letter-spacing: 3px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+nav a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #ff3030;
+}
+
+.hero {
+    min-height: 82vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    background:
+        radial-gradient(ellipse at center,
+        #351010 0%, #151010 38%, #080808 75%);
+}
+
+.badge {
+    color: #ff5555;
+    border: 1px solid #702020;
+    border-radius: 30px;
+    padding: 6px 16px;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(65px, 15vw, 120px);
+    font-weight: 1000;
+    letter-spacing: 8px;
+    color: #ff2424;
+    text-shadow: 0 0 35px #ff202044;
+    line-height: 1.4;
+}
+
+.hero h2 {
+    font-size: clamp(18px, 4vw, 28px);
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 550px;
+    color: #aaa;
+    margin-bottom: 28px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #ff2020;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+    border: 1px solid #ff2020;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #bd1010;
+}
+
+.btn.secondary {
+    background: transparent;
+    border-color: #555;
+}
+
+section {
+    padding: 65px 7%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.section-title span {
+    color: #ff3030;
+}
+
+.subtitle {
+    text-align: center;
+    color: #999;
+    margin-bottom: 35px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+    gap: 18px;
+}
+
+.card {
+    background: #121212;
+    border: 1px solid #292929;
+    padding: 25px;
+    border-radius: 13px;
+}
+
+.card h3 {
+    color: #ff4545;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.card a {
+    color: #ff5555;
+    text-decoration: none;
+}
+
+.server {
+    background: linear-gradient(135deg, #190909, #101010);
+    border: 1px solid #5b2020;
+    border-radius: 15px;
+    max-width: 650px;
+    margin: auto;
+    padding: 30px;
+}
+
+.server h3 {
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.server-row {
+    padding: 12px 0;
+    border-bottom: 1px solid #302020;
+    overflow-wrap: anywhere;
+}
+
+.server-row strong {
+    color: #ff6565;
+}
+
+.copy-btn {
+    margin-top: 15px;
+    padding: 11px 18px;
+    background: #ff2020;
+    border: 0;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.status {
+    color: #65e99b;
+    font-size: 13px;
+}
+
+footer {
+    background: #101010;
+    border-top: 1px solid #292929;
+    padding: 30px 15px;
+    text-align: center;
+    color: #888;
+    font-size: 13px;
+}
+
+footer strong {
+    color: #ff3030;
+}
+
+@media (max-width: 500px) {
+    header {
+        justify-content: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    section {
+        padding: 48px 5%;
+    }
+
+    .hero h1 {
+        letter-spacing: 4px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">REX.</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#server">SMP</a>
+        <a href="#socials">Socials</a>
+    </nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+    <span class="badge">OFFICIAL GAMING PROFILE</span>
+
+    <h1>REX</h1>
+
+    <h2>Minecraft Gamer & YouTube Creator</h2>
+
+    <p>
+        Welcome to my world. Minecraft, gaming, SMP adventures
+        and epic moments. This is the official place to find
+        my content and server community.
+    </p>
+
+    <div class="buttons">
+        <a class="btn"
+           href="https://youtube.com/@ownerrex"
+           target="_blank">▶ SUBSCRIBE</a>
+
+        <a class="btn secondary"
+           href="https://discord.gg/X7dNGKqmw3"
+           target="_blank">JOIN DISCORD</a>
+    </div>
+</section>
+
+<section id="about">
+    <h2 class="section-title">ABOUT <span>ME</span></h2>
+    <p class="subtitle">Get to know the creator behind REX.</p>
+
+    <div class="grid">
+        <div class="card">
+            <h3>👑 My Identity</h3>
+            <p>
+                Name: REX<br>
+                Role: Minecraft Gamer<br>
+                Creator: YouTube<br>
+                Gaming Style: Dark & Dangerous
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>⛏️ My Favourite Game</h3>
+            <p>
+                Minecraft is my gaming world.
+                I enjoy SMP adventures, survival,
+                PvP and creating gaming content.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🐉 My Mission</h3>
+            <p>
+                Build my gaming community,
+                create awesome videos and grow
+                the REX creator brand.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="server">
+    <h2 class="section-title">DOKHA <span>SMP</span></h2>
+    <p class="subtitle">Join the world. Don't trust here!</p>
+
+    <div class="server">
+        <h3>⚔️ DOKHA SMP S8</h3>
+        <p class="status">● Minecraft Server Information</p>
+
+        <div class="server-row">
+            <strong>IP / Address:</strong>
+            <span id="ip">dokhasmp8.mcsh.io</span>
+        </div>
+
+        <div class="server-row">
+            <strong>Port:</strong>
+            <span id="port">19132</span>
+        </div>
+
+        <div class="server-row">
+            <strong>Platform:</strong> Java / Bedrock / PE
+        </div>
+
+        <div class="server-row">
+            <strong>Version:</strong> 1.21+
+        </div>
+
+        <div class="server-row">
+            <strong>My Role:</strong> Co-Owner
+        </div>
+
+        <button class="copy-btn" onclick="copyIP()">
+            📋 COPY SERVER IP
+        </button>
+
+        <p id="copyStatus" style="margin-top:10px"></p>
+
+        <div style="margin-top:25px">
+            <a class="btn"
+               href="https://discord.gg/X7dNGKqmw3"
+               target="_blank">JOIN DOKHA SMP</a>
+        </div>
+    </div>
+</section>
+
+<section id="socials">
+    <h2 class="section-title">MY <span>SOCIALS</span></h2>
+    <p class="subtitle">Connect with REX online.</p>
+
+    <div class="grid">
+        <div class="card">
+            <h3>▶ YouTube</h3>
+            <p>Watch my gaming videos and subscribe.</p>
+            <p style="margin-top:15px">
+                <a href="https://youtube.com/@ownerrex"
+                   target="_blank">Visit My Channel ↗</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>💬 Discord</h3>
+            <p>Join the community and meet other players.</p>
+            <p style="margin-top:15px">
+                <a href="https://discord.gg/X7dNGKqmw3"
+                   target="_blank">Join My Discord ↗</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🎮 Gaming</h3>
+            <p>Minecraft, SMP, PvP and more gaming content.</p>
+            <p style="margin-top:15px">
+                <a href="#server">Explore DOKHA SMP ↗</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p><strong>REX.</strong> — Official Gaming Website</p>
+    <p>Made with passion for gaming.</p>
+    <p>© <span id="year"></span> REX. All rights reserved.</p>
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+function copyIP() {
+    const address = "dokhasmp8.mcsh.io";
+    const port = "19132";
+    const text = address + ":" + port;
+
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(() => {
+            document.getElementById("copyStatus").textContent =
+                "Copied: " + text;
+        }).catch(() => showIP(text));
+    } else {
+        showIP(text);
+    }
+}
+
+function showIP(text) {
+    document.getElementById("copyStatus").textContent =
+        "Server address: " + text;
+}
+</script>
+
+</body>
+</html>
+'''
+
+# Create the website file
+file_path = Path("REX_Official_Website.html")
+file_path.write_text(html, encoding="utf-8")
+
+print("🔥 REX WEBSITE CREATED SUCCESSFULLY!")
+print("File:", file_path.resolve())
+print("Open this HTML file in your browser.")
